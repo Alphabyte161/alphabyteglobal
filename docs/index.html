@@ -123,13 +123,6 @@ function anim()
 	timeout=setTimeout('anim()',fps);
 	}
 
-function move(evt)
-	{
-	evt=evt||event;
-	var doc=document.documentElement;
-	cursor_x=evt.pageX||evt.clientX+doc.scrollLeft-doc.clientLeft;
-	cursor_y=evt.pageY||evt.clientY+doc.scrollTop -doc.clientTop;
-	}
 
 function key_manager(evt)
 	{
