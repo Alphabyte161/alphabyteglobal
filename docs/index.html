@@ -20,9 +20,6 @@
 	</style>
 	<!--[if lt IE 9]><script type="text/javascript" src="../../../bin/flashcanvas.js"></script><![endif]-->
 </head>
-<div class="content">
-i am the overlord fear me
-</div>
 <script type="text/javascript">
 function $i(id) { return document.getElementById(id); }
 function $r(parent,child) { (document.getElementById(parent)).removeChild(document.getElementById(child)); }
@@ -123,62 +120,6 @@ function anim()
 			}
 		}
 	timeout=setTimeout('anim()',fps);
-	}
-
-
-function key_manager(evt)
-	{
-	evt=evt||event;
-	key=evt.which||evt.keyCode;
-	//ctrl=evt.ctrlKey;
-	switch(key)
-		{
-		case 27:
-			flag=flag?false:true;
-			if(flag)
-				{
-				timeout=setTimeout('anim()',fps);
-				}
-			else
-				{
-				clearTimeout(timeout);
-				}
-			break;
-		case 32:
-			star_speed_save=(star_speed!=0)?star_speed:star_speed_save;
-			star_speed=(star_speed!=0)?0:star_speed_save;
-			break;
-		case 13:
-			context.fillStyle='rgba(0,0,0,'+opacity+')';
-			break;
-		}
-	top.status='key='+((key<100)?'0':'')+((key<10)?'0':'')+key;
-	}
-
-function release()
-	{
-	switch(key)
-		{
-		case 13:
-			context.fillStyle='rgb(0,0,0)';
-			break;
-		}
-	}
-
-function mouse_wheel(evt)
-	{
-	evt=evt||event;
-	var delta=0;
-	if(evt.wheelDelta)
-		{
-		delta=evt.wheelDelta/120;
-		}
-	else if(evt.detail)
-		{
-		delta=-evt.detail/3;
-		}
-	star_speed+=(delta>=0)?-0.2:0.2;
-	if(evt.preventDefault) evt.preventDefault();
 	}
 
 function start()
