@@ -1,2 +1,0 @@
-# alphabyteglobal
-mi site bomboclaat
